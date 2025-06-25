@@ -1,0 +1,29 @@
+
+---
+
+## ✅ `.gitignore` for MindScope (PHP Project)
+
+```gitignore
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Node modules (if used for any tooling)
+node_modules/
+
+# PHPStorm or VSCode files
+.idea/
+.vscode/
+
+# Log files and environment configs
+*.log
+.env
+
+# OS generated files
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Cache & session files
+*.cache
+*.session
