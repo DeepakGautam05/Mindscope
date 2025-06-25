@@ -18,18 +18,8 @@ MindScope is a web-based mental health support platform designed to help users t
 - **Database**: MySQL
 - **Tools**: Bootstrap 5, FontAwesome
 
-# 🚀 Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/YOUR_USERNAME/mindscope.git
-cd mindscope
-
-# Start local server (example with PHP)
-php -S localhost:8000
-Make sure XAMPP/LAMP or a similar PHP + MySQL environment is set up.
-
-📸 Screenshots
+  ## More
+  📸 Screenshots
 
 
 🧠 Inspiration
@@ -44,3 +34,16 @@ Pull requests are welcome! Feel free to fork the project and suggest improvement
 
 Passionate about building real-world tech solutions that support mental health, productivity, and human connection.
 
+# 🚀 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/mindscope.git
+cd mindscope
+
+# Start local server (example with PHP)
+php -S localhost:8000
+Make sure XAMPP/LAMP or a similar PHP + MySQL environment is set up.
+
+
+``bash
