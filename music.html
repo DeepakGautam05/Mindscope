@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MindScope Background Music</title>
+</head>
+<body style="display:none;">
+  <script>
+    const audio = new Audio("https://www.bensound.com/bensound-music/bensound-slowmotion.mp3");
+    audio.volume = 0.3;
+    audio.loop = true;
+
+    const savedTime = localStorage.getItem("musicTime");
+    if (savedTime) {
+      audio.currentTime = parseFloat(savedTime);
+    }
+
+    audio.play().catch(() => {
+      // fallback in case autoplay fails
+      document.addEventListener("click", () => audio.play(), { once: true });
+    });
+
+    window.addEventListener("beforeunload", () => {
+      localStorage.setItem("musicTime", audio.currentTime);
+    });
+  </script>
+</body>
+</html>

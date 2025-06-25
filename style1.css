@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+body {
+    /* background: black; */
+    min-height: 200vh;
+}
+
+header {
+    position: fixed;
+    top: -12px;
+    left: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 20px 70px;
+    z-index: 100000;
+
+}
+
+header.sticky {
+    padding: 12px 70px;
+    background-color: #f1f5f9;
+    backdrop-filter: blur(100px);
+    
+
+}
+
+header .logo {
+    position: relative;
+    left: -50px;
+    font-weight: 700;
+    color: #f1f5f9;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+
+
+}
+
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -60px;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+    margin-top: 15px;   
+    
+    
+}
+
+header  li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+
+header.sticky .logo,
+header.sticky ul li a {
+    color: #000000;
+
+}
+
+
+.mt-5 text-muted small text-center{
+    color: #f1f5f9;
+}

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MindScope – Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style1.css">
+
+  <style>
+    body {
+      background-color: #E8F6EF;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .btn-custom {
+      font-size: 1.2rem;
+      border-radius: 1rem;
+      padding: 0.75rem 1rem;
+      width: 100%;
+    }
+
+    .word {
+      display: flex;
+      flex-wrap: wrap;
+      
+      font-size: 2.5rem;
+      color: #f1f5f9;
+      max-width: 100%;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .word span {
+      opacity: 0;
+      transform: translate(0, 0);
+      animation: flyIn 1s forwards,wave 5.5s infinite ease-in-out ;
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Animate each letter from different directions */
+    .word span:nth-child(1)  { animation-delay: 0.1s; transform: translate(-300px, -200px); }
+    .word span:nth-child(2)  { animation-delay: 0.2s; transform: translate(400px, -250px); }
+    .word span:nth-child(3)  { animation-delay: 0.3s; transform: translate(-200px, 300px); }
+    .word span:nth-child(4)  { animation-delay: 0.4s; transform: translate(300px, 250px); }
+    .word span:nth-child(5)  { animation-delay: 0.5s; transform: translate(-150px, -300px); }
+    .word span:nth-child(6)  { animation-delay: 0.6s; transform: translate(200px, -300px); }
+    .word span:nth-child(7)  { animation-delay: 0.7s; transform: translate(-400px, 200px); }
+    .word span:nth-child(8)  { animation-delay: 0.8s; transform: translate(250px, 250px); } 
+    .word span:nth-child(9)  { animation-delay: 0.9s; transform: translate(-300px, -200px); }
+    .word span:nth-child(10) { animation-delay: 1s;   transform: translate(300px, -150px); }
+    .word span:nth-child(11) { animation-delay: 1.1s; transform: translate(-200px, 300px); }
+    .word span:nth-child(12) { animation-delay: 1.2s; transform: translate(250px, 250px); }
+    .word span:nth-child(13) { animation-delay: 1.3s; transform: translate(-300px, -200px); }
+    .word span:nth-child(14) { animation-delay: 1.4s; transform: translate(300px, -150px); }
+    .word span:nth-child(15) { animation-delay: 1.5s; transform: translate(-250px, 300px); }
+    .word span:nth-child(16) { animation-delay: 1.6s; transform: translate(200px, 300px); }
+    .word span:nth-child(17) { animation-delay: 1.7s; transform: translate(-300px, -250px); }
+    .word span:nth-child(18) { animation-delay: 1.8s; transform: translate(300px, 250px); }
+    .word span:nth-child(19) { animation-delay: 1.9s; transform: translate(400px, -250px); }
+    .word span:nth-child(20) { animation-delay: 2.0s; transform: translate(-200px, 300px); }
+
+  
+
+    
+
+
+    @keyframes flyIn {
+      to {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+    }
+
+    
+
+
+
+    video.bg-video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      color: white;
+      font-size: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: sans-serif;
+      background: rgba(94, 94, 94, 0.3);
+      /* optional overlay */
+    }
+  </style>
+</head>
+
+<body>
+  <video class="bg-video" autoplay muted loop>
+    <source src="life.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+
+  <!-- Navbar -->
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top py-2">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="index.html">MindScope</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="quiz.html">Mental Check</a></li>
+          <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+          <li class="nav-item"><a class="nav-link" href="relax.html">Relaxation Zone</a></li>
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="auth.html">Login</a></li>
+          <li class="nav-item">
+            <button id="darkToggle" class="btn btn-sm btn-outline-secondary ms-2">🌓</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+
+  <header class="header" class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top py-2">
+    <a href="index.html" class="logo" class="nav-item">MindScope</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="quiz.html">Mental Check</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="relax.html">Relaxation Zone</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="auth.html">Login</a></li>
+      <li>
+        <button id="darkToggle" class="btn btn-sm btn-outline-secondary ms-2">🌓</button>
+      </li>
+    </ul>
+  </header>
+  <script type="text/javascript">
+    window.addEventListener("scroll", function () {
+      var header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY > 0);
+    })
+  </script>
+
+  <!-- Main content -->
+  <div class="container min-vh-100 d-flex flex-column justify-content-center align-items-center text-center"
+    style="margin-top: 150px;">
+    <!-- <h1 class="display-4 fw-bold mb-3">Welcome to <span style="color:#A0C4FF;">MindScope</span></h1> -->
+    <h1 class="display-4 fw-bold mb-3">
+      <div class="word">
+        <span>W</span>
+        <span>e</span>
+        <span>l</span>
+        <span>c</span>
+        <span>o</span>
+        <span>m</span>
+        <span>e</span>
+        <span>&nbsp;&nbsp;</span>
+        <span>T</span>
+        <span>o</span>
+        <span>&nbsp;&nbsp;</span>
+        <span style="color: #2cbcf6;">M</span>
+        <span style="color: #2cbcf6;">i</span>
+        <span style="color: #2cbcf6;">n</span>
+        <span style="color: #2cbcf6;">d</span>
+        <span style="color: #2cbcf6;">S</span>
+        <span style="color: #2cbcf6;">c</span>
+        <span style="color: #2cbcf6;">o</span>
+        <span style="color: #2cbcf6;">p</span>
+        <span style="color: #2cbcf6;">e</span>
+      </div>
+    </h1>
+
+    <div id="daily-quote" class="alert alert-info mt-3 p-3 rounded shadow-sm"></div>
+
+    <p style="max-width: 600px; color: #bae6fd;">
+      Your calm corner for mental wellness. Take a moment for yourself, check in, and find resources that care. 🌿
+    </p>
+
+    <div class="w-100" style="max-width: 350px;">
+      <a target="contentFrame" href="quiz.html" class="btn btn-primary btn-custom mb-3">🧠 Take a Mental Health
+        Check</a>
+      <a target="contentFrame" href="resources.html" class="btn btn-warning text-dark btn-custom mb-3">📚 Resources</a>
+      <a target="contentFrame" href="relax.html" class="btn btn-success btn-custom mb-3">😌 Relaxation Zone</a>
+    </div>
+
+    <form class="mt-4">
+      <label for="feedback" class="form-label" style="color: #f1f5f9;">How was your experience?</label><br>
+      <div class="d-flex gap-3 justify-content-center">
+        😞 <input type="radio" name="fb" value="1">
+        😐 <input type="radio" name="fb" value="2">
+        😊 <input type="radio" name="fb" value="3">
+      </div>
+    </form>
+    <div class="badge bg-success p-2 mt-3">🌟 Mental Check Hero</div>
+  </div>
+
+  <footer  style="color: #f1f5f9; margin-left: 33.8%; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" >
+    For informational purposes only. Not a substitute for professional help.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Daily Quote
+    const quotes = [
+      "You are enough, just as you are.",
+      "Progress, not perfection.",
+      "It’s okay to take a break.",
+      "Small steps every day.",
+      "You’re doing the best you can."
+    ];
+    const quote = quotes[new Date().getDate() % quotes.length];
+    document.getElementById('daily-quote').innerText = quote;
+
+    // Dark Mode Toggle
+    document.getElementById('darkToggle').onclick = () => {
+      document.body.classList.toggle('bg-dark');
+      document.body.classList.toggle('text-white');
+    };
+
+    // Continuous relaxing music with resume and autoplay logic
+    const audio = new Audio("https://www.bensound.com/bensound-music/bensound-slowmotion.mp3");
+    audio.volume = 0.2;
+    audio.loop = true;
+
+    const savedTime = localStorage.getItem("musicTime");
+    if (savedTime) {
+      audio.currentTime = parseFloat(savedTime);
+    }
+
+    const startMusic = () => {
+      audio.play().catch(() => {
+        document.addEventListener("click", () => audio.play(), { once: true });
+      });
+    };
+
+    startMusic();
+
+    window.addEventListener("beforeunload", () => {
+      localStorage.setItem("musicTime", audio.currentTime);
+    });
+  </script>
+
+  <script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2025/04/16/07/20250416070133-A08WFQWN.js"></script>
+
+
+  <iframe src="music.html" style="display:none;" id="musicFrame"></iframe>
+</body>
+
+</html>
